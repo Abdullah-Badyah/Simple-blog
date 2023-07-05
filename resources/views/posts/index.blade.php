@@ -109,9 +109,11 @@
 		</div>
 		<div class="col-4">
 			<div class="search">
-				<i class="fa fa-search"></i>
-				<input type="text" class="form-control" placeholder="Type here to search...">
-				<button class="btn btn-primary">Search</button>
+				<form action="{{ route('search') }}" method="GET">
+					<i class="fa fa-search"></i>
+					<input type="text" name="query" class="form-control" placeholder="Type here to search...">
+					<button type="submit" class="btn btn-primary">Search</button>
+				</form>
 			</div>
 		</div>
 

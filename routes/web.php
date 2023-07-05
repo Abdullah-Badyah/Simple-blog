@@ -37,5 +37,5 @@ Auth::routes();
 Route::get('/categories/{category}', [CatesController::class, 'show'])->name('cates.show');
 Route::get('/posts/publish/{post}', [PostsController::class, 'publish'])->name('posts.publish');
 
-
+Route::get('/search', [App\Http\Controllers\SearchController::class, 'search'])->name('search');
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
