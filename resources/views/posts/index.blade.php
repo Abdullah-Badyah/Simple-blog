@@ -94,7 +94,7 @@
 								</span>
 							</div>
 							<div class="postcard__bar on-top"></div>
-							<div class="postcard__preview-txt on-top">{{ Str::limit(strip_tags($post->content), 200, '...') }}</div>
+							<div class="postcard__preview-txt on-top">{{ Str::limit(strip_tags($item->content), 200, '...') }}</div>
 							<ul class="postcard__tagbox on-top">
 								<li class="tag__item play blue">
 									<a href="{{route('posts.show',$item->id)}}"><i class="fas fa-play mr-2"></i>Read More</a>
