@@ -38,4 +38,5 @@ Route::get('/categories/{category}', [CatesController::class, 'show'])->name('ca
 Route::get('/posts/publish/{post}', [PostsController::class, 'publish'])->name('posts.publish');
 
 Route::get('/search', [App\Http\Controllers\SearchController::class, 'search'])->name('search');
+// Route::get('/search/index', [App\Http\Controllers\SearchController::class, 'index'])->name('search.index');
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

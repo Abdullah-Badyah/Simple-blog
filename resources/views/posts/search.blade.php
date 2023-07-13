@@ -8,9 +8,49 @@
         <div class="search">
             <form action="{{ route('search') }}" method="GET">
                 <i class="fa fa-search"></i>
-                <input type="text" name="query" class="form-control" placeholder="Type here to search...">
+                <input type="text" name="query" class="form-control" value="{{$query}}" placeholder="Type here to search...">
+                <!-- <input type="text" name="query2" class="form-control" placeholder="Author..."> -->
+                
+                <!-- <select class="fstdropdown-select" id="example" value="{{$query2}}" name="query2">
+                    <option value="">Select option</option>
+                    @foreach ($users as $name)
+                        <option value="{{ $name }}" {{ $query2 == $name ? 'selected' : '' }}>{{ $name }}</option>
+                    @endforeach
+                </select> -->
+
+                <select class="js-example-basic-single" value="{{$query2}}" name="query2">
+                    <option value="">Select option</option>
+                    @foreach ($users as $name)
+                        <option value="{{ $name }}" {{ $query2 == $name ? 'selected' : '' }}>{{ $name }}</option>
+                    @endforeach
+                </select>
+
+                <!-- <select class="js-example-basic-multiple" name="query4"  multiple="multiple">
+                @foreach ($cates as $name)
+                    <option value="{{ $name }}">{{ $name }}</option>
+                @endforeach
+                </select> -->
+                
+                
+                @php
+                    $selectedValues = is_array(request('query4')) ? request('query4') : explode(',', request('query4', ''));
+                @endphp
+
+                <select class="js-example-basic-multiple" name="query4[]" multiple="multiple">
+                    @foreach ($cates as $name)
+                        <option value="{{ $name }}" {{ in_array($name, $selectedValues) ? 'selected' : '' }}>{{ $name }}</option>
+                    @endforeach
+                </select>
+
+                <input name="query3" id="startDate" class="form-control" value="{{$query3}}" type="date"/>
+
+                
+                
                 <button type="submit" class="btn btn-primary">Search</button>
             </form>
+ 
+
+
         </div>
     </div>
     <div class="col-3"></div>
@@ -35,3 +75,4 @@
 </div>
 
 @endsection
+

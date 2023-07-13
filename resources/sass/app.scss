@@ -1258,3 +1258,14 @@ CARDS
     transform: rotate(5deg) scale(1.1, 1.1);
     filter: brightness(110%);
 }
+
+// Select2
+.select2-selection__choice__remove span {
+    left: 7px;
+    position: absolute;
+    top: 0;
+}
+
+.select2-container{
+    width: 100% !important;
+}
