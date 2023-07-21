@@ -29,6 +29,10 @@ body {
     overflow-x: hidden;
 }
 
+main{
+    margin-top: -15vh;
+}
+
 .btn-primary{
     background-color: #28497a;
 
@@ -38,7 +42,11 @@ body {
 }
 
 nav {
-    background-color: #0d1824;
+        z-index: 2;
+        width: 94%;
+        margin: auto;
+        background-color: white;
+        margin-top: 5vh;
 }
 
 .dark {
@@ -483,12 +491,14 @@ a:hover {
     font-size: 18px;
     border-radius: 0px;
     box-shadow: none;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(0 0 0 / 25%);
+
     &:focus,
     &:active {
         outline: none !important;
         box-shadow: none;
     }
+   
 }
 textarea.form-control {
     height: inherit !important;
@@ -645,7 +655,7 @@ footer {
 }
 // ###############################################
 .carousel-inner {
-    height: 75vh;
+    height: 100vh;
 }
 .carousel {
     // margin-bottom: 60px;
@@ -1189,7 +1199,6 @@ CARDS
     overflow: hidden;
     position: relative;
     margin: 10px auto;
-    cursor: pointer;
 }
 
 .profile-card-4 img {
@@ -1268,4 +1277,36 @@ CARDS
 
 .select2-container{
     width: 100% !important;
+}
+
+// .select2{
+//     display: none;
+// }
+
+.search-lbl{
+    position: relative;
+    top: 18%;
+    left: 2%;
+    background: #f8fafc;
+    padding: 0 10px 0 7px;
+    z-index: 1;
+}
+
+span.select2-selection {
+    height: 52px !important;
+    background: #f8fafc !important;
+    color: #000 !important;
+    font-size: 18px !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    border: 1px solid rgb(0 0 0 / 25%) !important;
+}
+
+.select2-selection__rendered {
+    transform: translateY(50%);
+}
+
+.select2-selection__choice{
+    transform: translateY(50%);
+    margin-top: 0 !important;
 }

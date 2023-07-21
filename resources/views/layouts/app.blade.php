@@ -24,7 +24,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -108,14 +108,25 @@
             $('.js-example-basic-single').select2();
         });
 
-        function toggleStartDate() {
-            var startDate = document.getElementById("startDate");
-            if (document.getElementById("flexSwitchCheckDefault").checked) {
-                startDate.style.display = "block";
-            } else {
-                startDate.style.display = "none";
-            }
-        }
+
+        // function toggleStartDate() {
+        //     var startDate = document.getElementById("startDate");
+        //     var author = document.getElementsByClassName("select2")[0];
+        //     var cates = document.getElementsByClassName("select2")[1];
+
+        //     if (document.getElementById("flexSwitchCheckDefault").checked) {
+        //         startDate.style.display = "block";
+        //         author.style.display = "block";
+        //         cates.style.display = "block";
+        //     } else {
+        //         startDate.style.display = "none";
+        //         author.style.display = "none";
+        //         cates.style.display = "none";
+        //     }
+
+
+           
+        
     </script>
 </body>
 </html>
