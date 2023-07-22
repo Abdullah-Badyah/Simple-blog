@@ -1,5 +1,5 @@
     <div class="profile-card-4">
-        <a href="{{route('posts.show',$id)}}"><img src="images/{{$image}}"></a>
+        <a href="{{route('posts.show',$id)}}"><img src="/images/{{$image}}"></a>
         <div class="profile-content">
         <h5 class="postcard__title on-top font-weight-bold"><a class="text-black" href="{{route('posts.show',$id)}}">{{$title}}</a></h5>
         <div class="postcard__subtitle small text-muted">
