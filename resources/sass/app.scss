@@ -29,9 +29,6 @@ body {
     overflow-x: hidden;
 }
 
-main{
-    margin-top: -15vh;
-}
 
 .btn-primary{
     background-color: #28497a;
@@ -41,12 +38,13 @@ main{
     }
 }
 
-nav {
-        z-index: 2;
+#app nav {
+        z-index: 3;
         width: 94%;
         margin: auto;
         background-color: white;
         margin-top: 5vh;
+        border-radius: 5px;
 }
 
 .dark {
@@ -65,6 +63,10 @@ a,
 a:hover {
     text-decoration: none;
     transition: color 0.3s ease-in-out;
+}
+
+div#carouselExampleCaptions {
+    margin-top: -15vh;
 }
 
 #pageHeaderTitle {
@@ -124,7 +126,8 @@ a:hover {
     }
 
     .postcard__img_link {
-        display: contents;
+        display: flex;
+        width: 350px;
     }
 
     .postcard__bar {
@@ -160,9 +163,9 @@ a:hover {
 
         .tag__item {
             display: inline-block;
-            background: rgba(83, 83, 83, 0.4);
+            background: rgb(83 83 83 / 90%);
             border-radius: 3px;
-            padding: 2.5px 10px;
+            padding: 6.5px 18px;
             margin: 0 5px 5px 0;
             cursor: default;
             user-select: none;
@@ -190,6 +193,7 @@ a:hover {
         width: 100px;
     }
 }
+
 
 @media screen and (min-width: 769px) {
     .postcard {
@@ -1144,7 +1148,7 @@ CARDS
     height: 100%;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(7px) contrast(0.6);
 }
 
 .carousel-row {
@@ -1161,7 +1165,7 @@ CARDS
 
 .search input {
     height: 60px;
-    text-indent: 9px;
+    text-indent: 1px;
     border: 2px solid #d6d4d4;
     border-radius: 6px;
 }
@@ -1182,7 +1186,7 @@ CARDS
     top: 5px;
     right: 5px;
     height: 50px;
-    width: 110px;
+    width: 70px;
     background: #28497a;
 
     &:hover {
@@ -1309,4 +1313,34 @@ span.select2-selection {
 .select2-selection__choice{
     transform: translateY(50%);
     margin-top: 0 !important;
+}
+
+// Sidebar
+.widget-title{
+    border-left: 7px solid #28497a;
+    padding: 5px;
+    background: linear-gradient(90deg, #bbcde8, transparent);
+    margin-bottom: 0;
+}
+
+.list-group-item a{
+    color: initial;
+    font-size: 18px;
+}
+
+.widget-list{
+    padding-top: 8px;
+}
+
+.widget-list hr{
+    margin: 4px;
+    &:last-child {
+        display: none;
+    }
+}
+
+.social-imgs{
+    width: 11%;
+    margin: 15px 8px;
+    filter: contrast(0.6);
 }

@@ -12,7 +12,13 @@ class CatesController extends Controller
      */
     public function index()
     {
-        //
+        // $cates = Category::all();
+
+
+        // return view('posts.index', compact('cates'));
+
+        
+        // return view('index', compact('posts', 'cates'));
     }
 
     /**

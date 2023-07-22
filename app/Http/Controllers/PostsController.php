@@ -25,8 +25,9 @@ class PostsController extends Controller
     public function index()
     {
         $posts = Post::where('verified', 1)->latest()->paginate(5);
+        $cates = Category::all();
 
-        return view('posts.index', compact('posts'))
+        return view('posts.index', compact('posts', 'cates'))
                     ->with('i', (request()->input('page', 1)-1)*5);
     }
 
