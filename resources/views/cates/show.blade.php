@@ -27,6 +27,7 @@
                 </div>
             @endforeach -->
 
+            <span class="fs-2"><b>{{$categoryName}}</b> category</span>
             @if(count($posts) > 0)
         <div class="row">
             <!-- <ul class="ps-0"> -->

@@ -83,9 +83,9 @@ class PostsController extends Controller
         $config = HTMLPurifier_Config::createDefault();
         $purifier = new HTMLPurifier($config);
         $post->content = $purifier->purify($post->content);
-        
+        $cates = Category::all();
         $posts = Post::latest()->paginate(5);
-        return view('posts.show', compact('post','posts'));
+        return view('posts.show', compact('post','posts','cates'));
     }
 
     /**

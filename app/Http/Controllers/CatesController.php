@@ -52,7 +52,7 @@ class CatesController extends Controller
     public function show(Category $category)
     {
         $posts = $category->posts()->paginate(10);
-        return view('cates.show', ['category' => $category, 'posts' => $posts]);
+        return view('cates.show', ['category' => $category, 'categoryName' => $category-> name, 'posts' => $posts]);
     }
 
     /**

@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container p-5">
-        <div class="row align-items-start mb-4">
+    <div class="container py-5">
+        <!-- <div class="row align-items-start mb-4">
             <div class="col">
               <a class="btn btn-primary" href="{{route('posts.index')}}" >All Posts</a>
             </div>
-        </div>
+        </div> -->
 
         @if ($errors->any())
             <div class="alert alert-danger" role="alert">
@@ -18,16 +18,18 @@
             </div>
         @endif
 
-       <div class="card text-start">
-         <img class="card-img-top" src="/images/{{$post->image}}">
-         <div class="card-body">
-           <h1 class="card-title">{{$post->title}}</h1>
+<div class="row">
+    <div class="col-9 pe-4">
+    <div class="card text-start">
+        <h1 class="card-title">{{$post->title}}</h1>
+         <img class="" src="/images/{{$post->image}}">
+         <div class="card-body p-0">
            {{-- <h4 class="card-title">{{$post->category}}</h4> --}}
 
-           <div class="meta d-flex mb-3">
-            <div class="text-secondary pe-2"><ion-icon name="calendar"></ion-icon> {{$post->created_at}}</a></div>
-            <div class="text-secondary pe-2"><ion-icon name="person"></ion-icon> {{$post->createdBy->name}}</div>
-            <div class="text-secondary pe-2"><ion-icon name="document"></ion-icon>
+           <div class="meta post-meta d-flex mb-4 py-3 justify-content-center">
+            <div class="pe-4"><ion-icon name="calendar"></ion-icon> {{$post->created_at}}</a></div>
+            <div class="pe-4"><ion-icon name="person"></ion-icon> {{$post->createdBy->name}}</div>
+            <div class="pe-4"><ion-icon name="document"></ion-icon>
                 @foreach ($post->categories as $category)
                     {{ $category->name }}
                 @endforeach
@@ -36,5 +38,12 @@
            <p class="card-text">{!! $post->content !!}</p>         
          </div>
        </div>
+    </div>
+    <div class="col-3 mt-5">
+    @include('components.sidebar', ['posts'=>$posts ,'cates' => $cates])
+        
+    </div>
+</div>
+      
     </div>
 @endsection

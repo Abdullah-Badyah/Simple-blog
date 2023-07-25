@@ -703,6 +703,7 @@ footer {
     }
 }
 
+
 .carousel-control-prev,
 .carousel-control-next {
     z-index: 2;
@@ -799,9 +800,10 @@ CARDS
     margin-bottom: 30px;
     border-radius: 6px;
     color: rgba(0, 0, 0, 0.87);
-    background: #fff;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-        0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    background-color: transparent;
+    border: none;
+    // box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    //     0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 .card .card-image {
@@ -1343,4 +1345,13 @@ span.select2-selection {
     width: 11%;
     margin: 15px 8px;
     filter: contrast(0.6);
+}
+
+// Single post 
+
+.post-meta{
+    background: #222d3c;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
 }
